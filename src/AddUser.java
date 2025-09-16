@@ -1,0 +1,29 @@
+import java.math.BigDecimal;
+import java.sql.*;
+
+public class AddUser {
+    public void addUser(Users user){
+        String sql = "INSERT INTO users (UserID, FirstName, LastName, Balance, Address, City, DateOfBirth, Email, Password) " + "VALUES (?,?,?,?,?,?,?,?,?)";
+        try{
+            Connection connection = Database.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setString(1,user.getID());
+            preparedStatement.setString(2,user.getFirstName());
+            preparedStatement.setString(3,user.getLastName());
+            preparedStatement.setBigDecimal(4,user.getBalance());
+            preparedStatement.setString(5,user.getAddress());
+            preparedStatement.setString(6,user.getCity());
+            preparedStatement.setDate(7, java.sql.Date.valueOf(user.getDOB(user.getID())));
+            preparedStatement.setString(8,user.getEmail());
+            preparedStatement.setString(9,user.getPassword());
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("ERROR");
+            e.printStackTrace();
+        }
+    }
+
+}
