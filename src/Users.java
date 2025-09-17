@@ -15,6 +15,10 @@ public class Users{
     private String email;
     LocalDate DOB;
 
+    public Users(){
+
+    }
+
     public Users(BigDecimal balance, String ID, String FirstName, String LastName, String Password, String City, String address, String email){
         setAddress(address);
         setCity(City);

@@ -1,8 +1,11 @@
-import java.math.BigDecimal;
+
 import java.sql.*;
 
-public class AddUser {
-    public void addUser(Users user){
+//This class allows us to add a user to a database and remove them from it.
+
+public class UserOperations {
+
+    public static void AddUser(Users user){
         String sql = "INSERT INTO users (UserID, FirstName, LastName, Balance, Address, City, DateOfBirth, Email, Password) " + "VALUES (?,?,?,?,?,?,?,?,?)";
         try{
             Connection connection = Database.getConnection();
@@ -21,7 +24,26 @@ public class AddUser {
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
-            System.out.println("ERROR");
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public static void RemoveUser(Users user){
+        String sql = "DELETE FROM users WHERE UserID = ?";
+
+        try{
+            Connection connection = Database.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setString(1,user.getID());
+
+            preparedStatement.executeQuery();
+
+        }
+        catch (SQLException e){
             e.printStackTrace();
         }
     }

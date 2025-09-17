@@ -2,6 +2,9 @@ import java.sql.*;
 import java.io.IOException;
 import java.io.FileInputStream;
 import java.util.Properties;
+import java.io.InputStream;
+
+//This is where we store the information to connect to our database.
 
 public class Database {
 
@@ -11,8 +14,9 @@ public class Database {
 
     static{
         try{
+            InputStream input = Database.class.getResourceAsStream("config.properties");
             Properties prop = new Properties();
-            prop.load(new FileInputStream("config.properties"));
+            prop.load(input);
             url = prop.getProperty("db.url");
             name = prop.getProperty("db.name");
             DatabasePassword = prop.getProperty("db.password");
