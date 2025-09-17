@@ -1,0 +1,1 @@
+In this project I am just building a simple banking web application, using MYSQL as my database, Intellij as my IDE and Java for my bank end, and will be using Javascript and the REACT framework for my frontend once i get the business logic of the back end sorted out and handling user requests.
