@@ -39,5 +39,11 @@ public class UserController {
         return Return;
     }
 
+    @GetMapping("/me")
+    public String me(HttpSession session){
+        return  (String) session.getAttribute("email");
+
+    }
+
 
 }

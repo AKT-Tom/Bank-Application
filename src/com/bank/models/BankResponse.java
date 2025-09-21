@@ -3,11 +3,13 @@ import java.math.BigDecimal;
 
 public class BankResponse extends Response {
     BigDecimal amount;
-    BigDecimal newBalance;
+    BigDecimal RunningBalance;
+
+
 
     public BankResponse(boolean success, String message, BigDecimal balance, BigDecimal amount) {
         super(success, message);
-        this.newBalance = balance;
+        this.RunningBalance = balance;
         this.amount = amount;
     }
 
@@ -19,11 +21,11 @@ public class BankResponse extends Response {
         this.amount = amount;
     }
 
-    public BigDecimal getNewBalance() {
-        return newBalance;
+    public BigDecimal getRunningBalance() {
+        return RunningBalance;
     }
 
-    public void setNewBalance(BigDecimal newBalance) {
-        this.newBalance = newBalance;
+    public void setRunningBalance(BigDecimal runningBalance) {
+        this.RunningBalance = runningBalance;
     }
 }
