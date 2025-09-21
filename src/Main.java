@@ -1,23 +1,9 @@
-import java.math.BigDecimal;
-import java.sql.*;
-import java.util.Scanner;
-import java.math.BigDecimal;
-
+import com.bank.models.Users;
 
 
 public class Main{
 
     public static void main(String [] args){
-
-
-
-        login.LogUser();
-
-
-
-
-
-
 
     }
 }

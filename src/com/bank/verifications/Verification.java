@@ -1,14 +1,14 @@
+package com.bank.verifications;
+
+import com.bank.DAO.Database;
+import com.bank.models.Users;
+
 import java.sql.*;
 
 public class Verification  {
     private static boolean isValidID(Users user){// Checks if ID is valid
         //Check ID is not null, check ID matches 13 letters and checks if the ID is only digits
-        if (user.getID() != null && user.getID().matches("\\d{13}") && user.getID().matches("\\d+")){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return user.getID() != null && user.getID().matches("\\d{13}") && user.getID().matches("\\d+");
     }
 
     private static boolean Exists(Users user){        //Does a check on if the user is in our database by ID so we do not store duplicates
@@ -40,46 +40,31 @@ public class Verification  {
         }
 
         public static boolean CheckSignUp(Users user){
-            if (Exists(user) || !isValidID(user)){             //If user does exist or ID is invalid
-                System.out.println("Failed to sign in individual.");
-                if (!isValidID(user)){
-                    System.out.println("User ID is invalid.");
-                }
-                else {
-                    System.out.println("You already exist! Go to login.");
-                }
-                return false;
-            }
-            else{
-                System.out.println("Sign up was succesfull!");
-                return true;
-            }
+            //If user does exist or ID is invalid
+            return !Exists(user) && isValidID(user);
         }
 
-        public static boolean CheckLogIn(Users user, String password){
+        public static boolean CheckLogIn(String email, String password){
             String sql = "SELECT PASSWORD FROM users WHERE EMAIL = ?";
 
             try{
                 Connection conc = Database.getConnection();
                 PreparedStatement prep = conc.prepareStatement(sql);
 
-                prep.setString(1, user.getEmail());
+                prep.setString(1, email);
 
                 ResultSet result = prep.executeQuery();
 
                 if (result.next()){
                     String storedHash = result.getString("Password");
                     if (PasswordUtil.checkPassword(password, storedHash)){
-                        System.out.println("Log in was succesfull.");
                         return true;
                     }
                     else{
-                        System.out.println("Incorrect password.");
                         return false;
                     }
                 }
                 else{
-                    System.out.println("Log in was not succesfull.");
                     return false;
                 }
 

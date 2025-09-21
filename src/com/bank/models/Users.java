@@ -1,3 +1,7 @@
+package com.bank.models;
+
+import com.bank.verifications.PasswordUtil;
+
 import java.time.LocalDate;
 import java.math.BigDecimal;
 
@@ -15,10 +19,6 @@ public class Users{
     private String email;
     LocalDate DOB;
 
-    public Users(){
-
-    }
-
     public Users(BigDecimal balance, String ID, String FirstName, String LastName, String Password, String City, String address, String email){
         setAddress(address);
         setCity(City);
@@ -28,8 +28,10 @@ public class Users{
         setLastName(LastName);
         setBalance(balance);
         setPassword(Password);
-        this.DOB = getDOB(ID);
+        setDOB(DOB);
     }
+
+    void setDOB(LocalDate DOB){this.DOB = getDOB(ID);}
 
     void setBalance(BigDecimal balance){
         this.balance = balance;

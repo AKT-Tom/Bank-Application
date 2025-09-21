@@ -1,3 +1,6 @@
+package com.bank.DAO;
+
+import com.bank.models.Users;
 
 import java.sql.*;
 
@@ -40,7 +43,7 @@ public class UserOperations {
 
             preparedStatement.setString(1,user.getID());
 
-            preparedStatement.executeQuery();
+            preparedStatement.executeUpdate();
 
         }
         catch (SQLException e){

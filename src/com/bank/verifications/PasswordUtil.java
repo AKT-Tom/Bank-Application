@@ -1,9 +1,11 @@
+package com.bank.verifications;
+
 import org.mindrot.jbcrypt.BCrypt;
 //This class just hashes the password before storing it in the database and checks the password at user log.
 public class PasswordUtil {
     //Hashes password at user sign up
     public String hash(String password){
-        return BCrypt.hashpw(password, BCrypt.gensalt());
+        return BCrypt.hashpw(password, BCrypt.gensalt(12));
     }
 
     //Checks the password at user log in by sending a query to SQL for the password at specified email
