@@ -1,7 +1,7 @@
 package com.service;
-import com.bank.models.Response;
+import com.bank.classes.Response;
 import com.bank.DAO.UserOperations;
-import com.bank.models.Users;
+import com.bank.classes.Users;
 import com.bank.verifications.Verification;
 import org.springframework.stereotype.Service;
 

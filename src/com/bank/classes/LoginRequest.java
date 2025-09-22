@@ -1,4 +1,4 @@
-package com.bank.models;
+package com.bank.classes;
 
 public class LoginRequest {
     String email;

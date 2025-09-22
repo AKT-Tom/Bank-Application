@@ -1,6 +1,6 @@
 package com.bank.DAO;
 
-import com.bank.models.Users;
+import com.bank.classes.Users;
 
 import java.sql.*;
 

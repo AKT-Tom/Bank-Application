@@ -1,7 +1,7 @@
 package com.bank.verifications;
 
 import com.bank.DAO.Database;
-import com.bank.models.Users;
+import com.bank.classes.Users;
 
 import java.sql.*;
 

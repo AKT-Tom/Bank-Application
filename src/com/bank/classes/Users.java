@@ -1,4 +1,4 @@
-package com.bank.models;
+package com.bank.classes;
 
 import com.bank.verifications.PasswordUtil;
 

@@ -1,4 +1,4 @@
-package com.bank.models;
+package com.bank.classes;
 
 public class Response {
     private String message;
