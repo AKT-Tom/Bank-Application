@@ -1,7 +1,9 @@
 package com.service;
 
+import com.bank.DAO.GetRecords;
 import com.bank.DAO.TransactionsOperations;
 import com.bank.classes.BankResponse;
+import com.bank.classes.Records;
 import com.bank.classes.Transactions;
 import org.springframework.stereotype.Service;
 
@@ -38,5 +40,9 @@ public class BankService {
         else{
             return new BankResponse(true, "Withdrew succesfully",operations.CurrentUserBalance, transactions.getAmount());
         }
+    }
+
+    public Records history(String email) throws SQLException {
+       return  GetRecords.retrieveRecords(email);
     }
 }
