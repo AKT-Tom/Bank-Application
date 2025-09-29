@@ -9,9 +9,13 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/users")
 public class UserController {
+
+
+
 
     @Autowired
     private UserService usersService;
@@ -24,6 +28,7 @@ public class UserController {
     public Response register(@RequestBody Users user){
         return usersService.registerUser(user);
     }
+
 
     @PostMapping("/login")
     public Response logIN(@RequestBody LoginRequest login, HttpSession session){

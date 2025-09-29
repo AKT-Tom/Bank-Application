@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.sql.SQLException;
 
-
+@CrossOrigin
 @RequestMapping("/transaction")
 @RestController
 public class BankController {
