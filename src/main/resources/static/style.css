@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(44, 165, 64);
+}
+
+.form{
+    background-color:white;
+    height: 400px;
+    width: 400px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.items{
+    margin: 20px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+
+
+
+#email-input{
+    border: none;
+    border-bottom: solid black 1px;
+}
+#password-input{
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+
+label#login{
+    margin-bottom: 50px;
+    font-size: 1.5em;
+    margin-left: 130px;
+}
+
+#signin{
+    width: 200px;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: rgba(1, 121, 1, 0.459);
+}
+
+#signin:hover{
+    transition: background-color 0.2s ease-in-out;
+    background-color:rgb(44, 165, 64);
+}
+
+#signin:focus{
+    background-color:rgba(1, 121, 1, 0.459);
+}
+#register-user{
+    margin-left: 60px;
+}
+
