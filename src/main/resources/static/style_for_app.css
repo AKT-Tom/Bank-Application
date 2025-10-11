@@ -1,0 +1,154 @@
+body{
+    background-color: rgba(255, 255, 255, 0.452);
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: rgb(44, 165, 64);
+}
+.header-line{
+    height: 1px;
+    background-color: white;
+    margin:0;
+    padding: 0;
+    border: none;
+}
+.header-buttons{
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: rgb(44, 165, 64);
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    
+
+}
+
+#overview{
+    border-bottom: black 3px solid;
+}
+
+.header-buttons:hover{
+    outline: none;
+    box-shadow: none;
+    transition: black 0.3s ease-in-out;
+    border-bottom: black 3px solid;
+}
+
+.form{
+    border: black 1px solid;
+    margin: auto;
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    margin-top: 100px;
+    border-radius: 15px;
+
+    
+
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    padding-right: 190px;
+    gap: 20px;
+    
+}
+
+.button{
+    
+     background-color: rgba(1, 121, 1, 0.459);
+    color: black;
+    border: black 1px solid;
+    border-radius: 8px;
+    font-size: 18px;
+
+}
+
+.button:hover{
+    transition: background-color 0.2s ease-in-out;
+    background-color:rgb(44, 165, 64);
+}
+
+
+.balance{
+    color: rgb(100, 100, 100);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 150px;
+    margin-top: 20px;
+   
+
+
+}
+
+.deposit-container{
+    display: none;
+    border: black 1px solid;
+    margin: auto;
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    margin-top: 100px;
+    border-radius: 15px;
+}
+
+.transfer-container{
+    display: none;
+    border: black 1px solid;
+    margin: auto;
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    margin-top: 100px;
+    border-radius: 15px;
+
+}
+
+.withdraw-container{
+    display: none;
+    border: black 1px solid;
+    margin: auto;
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    margin-top: 100px;
+    border-radius: 15px;
+
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 100px;
+    margin-right: 50px;
+    gap: 20px;
+    
+}
+
+.transfer-content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px
+}
+
+.buttons-transfer{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}

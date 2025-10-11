@@ -1,0 +1,70 @@
+body{
+    background-image: url("Clerk_working.jpg") ;
+    /* background-color: rgb(44, 165, 64); */
+    background-position: right;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+    
+}
+
+div.register-form{
+    box-sizing: border-box;
+    margin: 0px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: max(400px, 30%);
+    border-radius: 0px 20px 20px 0px;
+    height: 100vh;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#submit{
+    width: 250px;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: rgba(1, 121, 1, 0.459);
+}
+
+#submit:hover{
+    transition: background-color 0.2s ease-in-out;
+    background-color:rgb(44, 165, 64);
+}
+
+#submit:focus{
+    background-color:rgba(1, 121, 1, 0.459);
+}
+
+.input{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: black 1px solid;
+    width: 250px;
+}
+
+.input:focus{
+    border: none;
+    transition: background-rgb(80, 114, 36)color 0.2 ease-in-out;
+    border-bottom: solid 2px rgb(104, 139, 58);
+    outline: none;
+    box-shadow: none;
+}
+
+/*
+#error-message{
+    width: max(400px, 30%);
+   color: white;
+   padding: 12px;
+   font-size: 15px;
+   box-sizing: border-box;
+   position: fixed;
+   left: 3;
+   bottom: 0;
+}
+*

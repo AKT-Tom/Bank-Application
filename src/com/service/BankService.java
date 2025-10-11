@@ -1,6 +1,6 @@
 package com.service;
 
-import com.bank.DAO.GetRecords;
+import com.bank.classes.GetRecords;
 import com.bank.DAO.TransactionsOperations;
 import com.bank.classes.BankResponse;
 import com.bank.classes.Records;

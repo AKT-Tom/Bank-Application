@@ -22,16 +22,6 @@ body{
 
 
 
-#email-input{
-    border: none;
-    border-bottom: solid black 1px;
-}
-#password-input{
-    border: none;
-    border-bottom: 1px solid black;
-}
-
-
 label#login{
     margin-bottom: 50px;
     font-size: 1.5em;
@@ -57,3 +47,32 @@ label#login{
     margin-left: 60px;
 }
 
+#email-input{
+    border: none;
+    border-bottom: solid 1px black;
+    
+
+}
+
+#email-input:focus{
+    border: none;
+    transition: background-rgb(80, 114, 36)color 0.2 ease-in-out;
+    border-bottom: solid 2px rgb(104, 139, 58);
+    outline: none;
+    box-shadow: none;
+    
+}
+
+#password-input{
+    border: none;
+    border-bottom: solid 1px black;
+    
+}
+
+#password-input:focus{
+    border: none;
+    transition: background-rgb(80, 114, 36)color 0.2 ease-in-out;
+    border-bottom: solid 2px rgb(104, 139, 58);
+    outline: none;
+    box-shadow: none;
+}

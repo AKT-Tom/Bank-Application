@@ -4,11 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style_for_app.css">
 </head>
 <body>
+    <header>
+        
+        <button class="header-buttons" id="overview">Overview</button>
+        <button class="header-buttons" id="Transactions-button">Transactions</button>
+    </header>
 
-    <button id="test" style="font-size: 20px">Submit</button>
+    <div class="header-line"></div>
+    <div class="form">
 
+        <div class="balance">
+            <label id="available-balance"> <strong> Available Balance </strong> </label>
+            <strong><label id="amount" style="font-size: 1.8rem; margin-left: 17px;"></label></strong>
+            
+            <div class="buttons">
+            <button class="button" id="deposit">Deposit</button>
+            <button class="button" id="withdraw">Withdraw</button>
+            <button class="button" id="transfer">Transfer</button>
+            </div>
+        
+        </div> 
+
+        <div class="deposit-container">
+            <div class="content">
+            <input type="number" placeholder="Amount" id="deposit-amount">
+            <button id="deposit-button">Deposit</button>
+            <button class="cancel-button">Cancel</button>
+            </div>
+        </div>
+
+        <div class="withdraw-container">
+             <div class="content">
+            <input type="number" placeholder="Amount" id="withdraw-amount">
+            <button id="withdraw-button">Withdraw</button>
+            <button class="cancel-button">Cancel</button>
+            </div>
+
+        </div>
+
+        <div class="transfer-container">
+
+             
+                <div class="transfer-content">
+                    <input type="number" placeholder="Amount" id="transfer-amount">
+                    <input type="email" placeholder="User@email" id="user-input">
+                    <div class="buttons-transfer">
+                    <button id="transfer-button">Transfer</button>
+                    <button class="cancel-button">Cancel</button>
+                    </div>
+            </div>
+
+        </div>
+
+        
 
     <script src="App.js"></script>
     

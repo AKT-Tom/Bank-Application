@@ -1,7 +1,6 @@
-package com.bank.DAO;
+package com.bank.classes;
 
-import com.bank.classes.History;
-import com.bank.classes.Records;
+import com.bank.DAO.Database;
 
 import java.math.BigDecimal;
 import java.sql.Connection;

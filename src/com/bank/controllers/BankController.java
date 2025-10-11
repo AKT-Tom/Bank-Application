@@ -1,6 +1,5 @@
 package com.bank.controllers;
 
-import com.bank.DAO.TransactionsOperations;
 import com.bank.classes.BankResponse;
 
 import com.bank.classes.Records;
@@ -56,7 +55,8 @@ public class BankController {
     }
 
     @PostMapping("/transfer")
-    public BankResponse transfer(@RequestBody Transactions transactions, HttpSession session) throws SQLException {
+    public BankResponse transfer(@RequestBody(required = false) Transactions transactions, HttpSession session) throws SQLException {
+        
         if (session.getAttribute("email") != null){
             return bankService.Transfer(transactions,(String) session.getAttribute("email"));
         }

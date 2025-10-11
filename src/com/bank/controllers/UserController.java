@@ -1,11 +1,10 @@
 package com.bank.controllers;
 
 
-import com.bank.classes.LoginRequest;
+import com.bank.verifications.LoginRequest;
 import com.bank.classes.Response;
 import com.bank.classes.Users;
 import com.service.UserService;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.bank.classes;
+package com.bank.verifications;
 
 public class LoginRequest {
     String email;

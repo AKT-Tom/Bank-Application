@@ -1,6 +1,5 @@
 package com.bank.DAO;
 
-import com.bank.classes.BankResponse;
 import com.bank.classes.Transactions;
 
 import java.math.BigDecimal;
@@ -29,6 +28,7 @@ public class TransactionsOperations {
         statement.setBigDecimal(2, transactions.getAmount());
 
         ResultSet result = statement.executeQuery();
+
 
         return result.next();
     }
