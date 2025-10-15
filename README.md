@@ -5,11 +5,11 @@ Built with Java Spring Boot, MySQL, Redis, Docker
 ## To run locally:
 1. Install MySQL and create two tables
 2. Create table users and records
-3. Configure configure.properties file with your database password, name and jdbc routing.
+3. Create a configure.properties file with your database password, name and jdbc routing.
 4. Run: mvn spring-boot:run
 5. Access at http://localhost:8080
 
-##MySQL schema 
+## MySQL schema 
 CREATE TABLE USERS(
    UserID PRIMARY KEY,
    FirstName VARCHAR(100) NOT NULL,
