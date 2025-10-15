@@ -33,22 +33,7 @@ public class UserOperations {
 
     }
 
-    public static void RemoveUser(Users user){
-        String sql = "DELETE FROM users WHERE UserID = ?";
-
-        try{
-            Connection connection = Database.getConnection();
-
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-
-            preparedStatement.setString(1,user.getID());
-
-            preparedStatement.executeUpdate();
-
-        }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
+    
     }
 
 }
